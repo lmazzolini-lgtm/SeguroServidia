@@ -168,66 +168,195 @@ Porque más que seguros, ofrecemos tranquilidad y el respaldo de una historia co
         </iframe>
     </div>
 </section>
-<section id="contactanos">
-        <h2>Pedí tu Presupuesto por WhatsApp</h2>
-        <p>Completá estos 3 simples pasos y te enviamos la propuesta al instante.</p>
+<section id="contactanos" style="padding: 60px 20px; background-color: #f8fafc; font-family: sans-serif;">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 2rem; color: #1e293b; margin-bottom: 10px;">Pedí tu Presupuesto por WhatsApp</h2>
+            <p style="color: #64748b; font-size: 1rem;">Completá estos 3 simples pasos y te enviamos la propuesta al instante.</p>
+        </div>
 
-        <form id="cotizador-seguros">
-            <div class="progress-bar">
-                <span id="progress-text">Paso 1 de 3</span>
+        <div class="cotizador-container">
+            
+            <div class="progress-container">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                <span class="progress-text" id="progress-text">Paso 1 de 3</span>
             </div>
 
-<fieldset class="step active">
-        <h3>1. ¿Qué seguro estás buscando?</h3>
-        <label for="wa-seguro">Seleccioná una opción:</label>
-        <select id="wa-seguro" required>
-            <option value="" disabled selected>Elegí un seguro...</option>
-            <option value="Autos 🚗">Autos 🚗</option>
-            <option value="Motos 🏍️">Motos 🏍️</option>
-            <option value="Embarcaciones 🚤">Embarcaciones 🚤</option>
-            <option value="Eventos 🎪">Eventos 🎪</option>
-            <option value="Accidentes Personales 🤕">Accidentes Personales 🤕</option>
-            <option value="Combinado Familiar 🏡">Combinado Familiar 🏡</option>
-            <option value="Caución 📋">Caución 📋</option>
-            <option value="ART 👷">ART 👷</option>
-            <option value="Comercio 🏢">Comercio 🏢</option>
-            <option value="Vida ❤️">Vida ❤️</option>
-        </select>
-    <div class="form-buttons">
-        <button type="button" class="btn btn-next">Siguiente</button>
-    </div>
-</fieldset>
+            <form id="cotizador-seguros">
+                
+                <fieldset class="step active">
+                    <h3 class="step-title">1. ¿Qué seguro estás buscando?</h3>
+                    <div class="form-group">
+                        <label class="form-label" for="wa-seguro">Seleccioná una opción:</label>
+                        <select class="form-control" id="wa-seguro" required>
+                            <option value="" disabled selected>Elegí un seguro...</option>
+                            <option value="Autos 🚗">Autos 🚗</option>
+                            <option value="Motos 🏍️">Motos 🏍️</option>
+                            <option value="Embarcaciones 🚤">Embarcaciones 🚤</option>
+                            <option value="Eventos 🎪">Eventos 🎪</option>
+                            <option value="Accidentes Personales 🤕">Accidentes Personales 🤕</option>
+                            <option value="Combinado Familiar 🏡">Combinado Familiar 🏡</option>
+                            <option value="Caución 📋">Caución 📋</option>
+                            <option value="ART 👷">ART 👷</option>
+                            <option value="Comercio 🏢">Comercio 🏢</option>
+                            <option value="Vida ❤️">Vida ❤️</option>
+                        </select>
+                    </div>
+                    <div class="form-buttons" style="justify-content: flex-end;">
+                        <button type="button" class="btn-step btn-next">Siguiente →</button>
+                    </div>
+                </fieldset>
 
-            <fieldset class="step">
-                <h3>2. Detalles para la cotización</h3>
-                <label for="wa-mensaje">Contanos brevemente (Año, modelo o características):</label>
-                <textarea id="wa-mensaje" rows="4" placeholder="Ej: Fiat Cronos 2022, o Cobertura para casamiento de 100 personas..." required></textarea>
-                <div class="form-buttons">
-                    <button type="button" class="btn btn-prev">Anterior</button>
-                    <button type="button" class="btn btn-next">Siguiente</button>
-                </div>
-            </fieldset>
+                <fieldset class="step">
+                    <h3 class="step-title">2. Detalles para la cotización</h3>
+                    <div class="form-group">
+                        <label class="form-label" for="wa-mensaje">Contanos brevemente (Año, modelo o características):</label>
+                        <textarea class="form-control" id="wa-mensaje" rows="4" placeholder="Ej: Fiat Cronos 2022, ART para 3 empleados, Seguro de Comercio para fiambrería..." required></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn-step btn-prev">← Anterior</button>
+                        <button type="button" class="btn-step btn-next">Siguiente →</button>
+                    </div>
+                </fieldset>
 
-            <fieldset class="step">
-                <h3>3. ¿Quién solicita la cotización?</h3>
-                <label for="wa-nombre">Nombre y Apellido:</label>
-                <input type="text" id="wa-nombre" placeholder="Tu nombre" required>
-
-                <label for="wa-email">Correo Electrónico:</label>
-                <input type="email" id="wa-email" placeholder="tu@email.com" required>
-
-                <div class="form-buttons">
-                    <button type="button" class="btn btn-prev">Anterior</button>
-                    <button type="submit" class="btn btn-submit">Enviar a WhatsApp 💬</button>
-                </div>
-            </fieldset>
-        </form>
+                <fieldset class="step">
+                    <h3 class="step-title">3. ¿Quién solicita la cotización?</h3>
+                    <div class="form-group">
+                        <label class="form-label" for="wa-nombre">Nombre y Apellido:</label>
+                        <input class="form-control" type="text" id="wa-nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="wa-email">Correo Electrónico:</label>
+                        <input class="form-control" type="email" id="wa-email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn-step btn-prev">← Anterior</button>
+                        <button type="submit" class="btn-step btn-submit">Enviar a WhatsApp 💬</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
     </section>
 
-    <footer>
+    <style>
+        .cotizador-container {
+            max-width: 550px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .progress-container {
+            background-color: #f1f5f9;
+            height: 20px;
+            border-radius: 10px;
+            position: relative;
+            margin-bottom: 35px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+            height: 100%;
+            width: 33.33%; /* Inicia en el paso 1 */
+            transition: width 0.4s ease;
+        }
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #1e293b;
+            mix-blend-mode: multiply;
+        }
+        .step {
+            display: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        .step.active {
+            display: block;
+            animation: slideFade 0.4s ease-in-out;
+        }
+        .step-title {
+            font-size: 1.25rem;
+            color: #0f172a;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #475569;
+            margin-bottom: 8px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #334155;
+            background-color: #f8fafc;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            gap: 10px;
+        }
+        .btn-step {
+            padding: 12px 24px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+        .btn-next {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .btn-next:hover { background-color: #2563eb; }
+        .btn-prev {
+            background-color: #e2e8f0;
+            color: #475569;
+        }
+        .btn-prev:hover { background-color: #cbd5e1; }
+        .btn-submit {
+            background-color: #22c55e;
+            color: white;
+            flex-grow: 1;
+        }
+        .btn-submit:hover { background-color: #16a34a; }
+        
+        @keyframes slideFade {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <footer style="background-color: #0f172a; color: #94a3b8; padding: 30px 20px; text-align: center; margin-top: 40px;">
         <div class="container">
-            <p>© 2026 ServidiaSeguro. Todos los derechos reservados.</p>
-            <p>Empalme Villa Constitución, Santa Fe, Argentina.</p>
+            <p style="color: #ffffff; margin-bottom: 5px;">© 2026 ServidiaSeguro. Todos los derechos reservados.</p>
+            <p style="font-size: 0.9rem;">Empalme Villa Constitución, Santa Fe, Argentina.</p>
         </div>
     </footer>
 
@@ -237,87 +366,13 @@ Porque más que seguros, ofrecemos tranquilidad y el respaldo de una historia co
             const nextButtons = document.querySelectorAll(".btn-next");
             const prevButtons = document.querySelectorAll(".btn-prev");
             const progressText = document.getElementById("progress-text");
-            const form = document.getElementById("cotizador-seguros");
-
-            let currentStep = 0;
-
-            // Navegación de los pasos
-            function showStep(stepIndex) {
-                steps.forEach((step, index) => {
-                    step.classList.toggle("active", index === stepIndex);
-                });
-                progressText.textContent = `Paso ${stepIndex + 1} de ${steps.length}`;
-            }
-
-            function validateStep(stepIndex) {
-                const inputs = steps[stepIndex].querySelectorAll("[required]");
-                for (let input of inputs) {
-                    if (!input.checkValidity()) {
-                        input.reportValidity();
-                        return false;
-                    }
-                }
-                return true;
-            }
-
-            nextButtons.forEach((button) => {
-                button.addEventListener("click", () => {
-                    if (validateStep(currentStep)) {
-                        currentStep++;
-                        showStep(currentStep);
-                    }
-                });
-            });
-
-            prevButtons.forEach((button) => {
-                button.addEventListener("click", () => {
-                    currentStep--;
-                    showStep(currentStep);
-                });
-            });
-
-            // ENVÍO FINAL A WHATSAPP
-            form.addEventListener("submit", function(event) {
-                event.preventDefault(); 
-
-                // Capturamos los datos de los 3 pasos
-                var nombre = document.getElementById('wa-nombre').value;
-                var seguro = document.getElementById('wa-seguro').value;
-                var mensaje = document.getElementById('wa-mensaje').value;
-                var email = document.getElementById('wa-email').value;
-
-                var numeroWhatsApp = "+5493400661689"; 
-
-                // Armamos un texto súper ordenado y profesional para tu WhatsApp
-                var texto = "Hola Servidia Seguros, mi nombre es *" + nombre + "*.%0A" +
-                            "Me interesa consultar por un seguro para *" + seguro + "*.%0A%0A" +
-                            "*Detalles enviados:* " + mensaje + "%0A" +
-                            "*Email de contacto:* " + email;
-
-                var url = "https://wa.me/" + numeroWhatsApp + "?text=" + texto;
-                
-                // Abre el chat de WhatsApp
-                window.open(url, '_blank');
-
-                // Opcional: Reinicia el formulario al primer paso tras enviar
-                form.reset();
-                currentStep = 0;
-                showStep(currentStep);
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const steps = Array.from(document.querySelectorAll(".step"));
-            const nextButtons = document.querySelectorAll(".btn-next");
-            const prevButtons = document.querySelectorAll(".btn-prev");
-            const progressText = document.getElementById("progress-text");
+            const progressBarFill = document.getElementById("progress-bar-fill");
             const form = document.getElementById("cotizador-seguros");
             const selectSeguro = document.getElementById('wa-seguro');
 
             let currentStep = 0;
 
-            // Al hacer clic en una tarjeta de arriba, selecciona ese seguro abajo automáticamente
+            // Enlace inteligente desde las tarjetas del inicio
             document.querySelectorAll('.card-link').forEach(link => {
                 link.addEventListener('click', () => {
                     const tituloTarjeta = link.querySelector('h3').textContent.trim().toLowerCase();
@@ -330,15 +385,21 @@ Porque más que seguros, ofrecemos tranquilidad y el respaldo de una historia co
                 });
             });
 
-            // Control visual de los pasos
+            // Función corregida para alternar pasos y actualizar la barra gráfica
             function showStep(stepIndex) {
                 steps.forEach((step, index) => {
                     step.classList.toggle("active", index === stepIndex);
                 });
+                
+                // Actualiza el texto
                 progressText.textContent = `Paso ${stepIndex + 1} de ${steps.length}`;
+                
+                // Actualiza el ancho de la barra visual de forma matemática
+                const porcentaje = ((stepIndex + 1) / steps.length) * 100;
+                progressBarFill.style.width = `${porcentaje}%`;
             }
 
-            // Validar campos obligatorios antes de avanzar
+            // Validar campos obligatorios del paso actual de forma estricta
             function validateStep(stepIndex) {
                 const inputs = steps[stepIndex].querySelectorAll("[required]");
                 for (let input of inputs) {
@@ -350,7 +411,7 @@ Porque más que seguros, ofrecemos tranquilidad y el respaldo de una historia co
                 return true;
             }
 
-            // Botón Siguiente
+            // Eventos para el botón Siguiente
             nextButtons.forEach((button) => {
                 button.addEventListener("click", () => {
                     if (validateStep(currentStep)) {
@@ -360,15 +421,17 @@ Porque más que seguros, ofrecemos tranquilidad y el respaldo de una historia co
                 });
             });
 
-            // Botón Anterior
+            // Eventos para el botón Anterior
             prevButtons.forEach((button) => {
                 button.addEventListener("click", () => {
-                    currentStep--;
-                    showStep(currentStep);
+                    if (currentStep > 0) {
+                        currentStep--;
+                        showStep(currentStep);
+                    }
                 });
             });
 
-            // Envío de datos ordenados a tu WhatsApp
+            // Envío final a WhatsApp
             form.addEventListener("submit", function(event) {
                 event.preventDefault(); 
 
@@ -377,7 +440,7 @@ Porque más que seguros, ofrecemos tranquilidad y el respaldo de una historia co
                 var mensaje = document.getElementById('wa-mensaje').value;
                 var email = document.getElementById('wa-email').value;
 
-                var numeroWhatsApp = "+5493400661689"; 
+                var numeroWhatsApp = "+54 3364 63-3252"; 
 
                 var texto = "Hola Servidia Seguros, mi nombre es *" + nombre + "*.%0A" +
                             "Me interesa consultar por un seguro para *" + seguro + "*.%0A%0A" +
@@ -388,7 +451,7 @@ Porque más que seguros, ofrecemos tranquilidad y el respaldo de una historia co
                 
                 window.open(url, '_blank');
 
-                // Resetea el formulario al terminar
+                // Resetea todo de forma limpia
                 form.reset();
                 currentStep = 0;
                 showStep(currentStep);

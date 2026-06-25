@@ -20,7 +20,7 @@
                     <li><a href="#quienes-somos">Quiénes Somos</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#contactanos">Contactanos</a></li>
+                    <li><a href="#contactanos">Contáctanos</a></li>
                 </ul>
             </nav>
         </div>
@@ -159,78 +159,242 @@ Porque más que seguros, ofrecemos tranquilidad y el respaldo de una historia co
     
     <div class="mapa-contenedor">
         
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.2253748899534!2d-60.384009188986916!3d-33.26059158770318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b76de46439a6bd%3A0x755d11e213865b2c!2sSEGUROS%20SERVIDIA!5e0!3m2!1ses!2sar!4v1781821529628!5m2!1ses!2sar"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><iframe>  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe> 
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.2253748899534!2d-60.384009188986916!3d-33.26059158770318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b76de46439a6bd%3A0x755d11e213865b2c!2sSEGUROS%20SERVIDIA!5e0!3m2!1ses!2sar!4v1781821529628!5m2!1ses!2sar"  
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 </section>
 <section id="contactanos">
-        <h2>Contactanos</h2>
-        
-        <div class="contacto-wrapper">
-            
-            <form id="form-whatsapp" class="contacto-form">
-                <h3>Envianos tu consulta</h3>
-                <input type="text" id="wa-nombre" placeholder="Tu nombre" required>
-                
-                <select id="wa-seguro" required>
-                    <option value="" disabled selected>Seleccioná el seguro que te interesa</option>
-                    <option value="Auto">Seguro de Auto</option>
-                    <option value="Moto">Seguro de Moto</option>
-                    <option value="Hogar">Seguro de Hogar</option>
-                    <option value="Vida">Seguro de Vida</option>
-                    <option value="Comercio">Seguro de Comercio / Empresa</option>
-                    <option value="Otro">Otro / Otra consulta</option>
-                </select>
-                
-                <textarea id="wa-mensaje" placeholder="Contanos qué necesitás..." required></textarea>
-                
-                <button type="submit" class="btn">Enviar por WhatsApp 📲</button>
-            </form>
-            <div class="contacto-directo">
-                <h3>Comunicate directamente</h3>
-                <p>Si preferís no rellenar el formulario, podés llamarnos o escribirnos ahora mismo:</p>
-                
-                <div class="info-item">
-                    <span class="icono-contacto">📞</span>
-                    <div>
-                        <strong>Llamanos al:</strong>
-                        <a href="tel:+540093364633252">+540093364633252</a>
-                    </div>
-                </div>
+        <h2>Pedí tu Presupuesto por WhatsApp</h2>
+        <p>Completá estos 3 simples pasos y te enviamos la propuesta al instante.</p>
 
-                <div class="info-item">
-                    <span class="icono-contacto">📧</span>
-                    <div>
-                        <strong>Escribinos a:</strong>
-                        <a href="mailto:servidiaemp@gmail.com">servidiaemp@gmail.com</a>
-                    </div>
-                </div>
+        <form id="cotizador-seguros">
+            <div class="progress-bar">
+                <span id="progress-text">Paso 1 de 3</span>
             </div>
 
-        </div>
+<fieldset class="step active">
+        <h3>1. ¿Qué seguro estás buscando?</h3>
+        <label for="wa-seguro">Seleccioná una opción:</label>
+        <select id="wa-seguro" required>
+            <option value="" disabled selected>Elegí un seguro...</option>
+            <option value="Autos 🚗">Autos 🚗</option>
+            <option value="Motos 🏍️">Motos 🏍️</option>
+            <option value="Embarcaciones 🚤">Embarcaciones 🚤</option>
+            <option value="Eventos 🎪">Eventos 🎪</option>
+            <option value="Accidentes Personales 🤕">Accidentes Personales 🤕</option>
+            <option value="Combinado Familiar 🏡">Combinado Familiar 🏡</option>
+            <option value="Caución 📋">Caución 📋</option>
+            <option value="ART 👷">ART 👷</option>
+            <option value="Comercio 🏢">Comercio 🏢</option>
+            <option value="Vida ❤️">Vida ❤️</option>
+        </select>
+    <div class="form-buttons">
+        <button type="button" class="btn btn-next">Siguiente</button>
+    </div>
+</fieldset>
+
+            <fieldset class="step">
+                <h3>2. Detalles para la cotización</h3>
+                <label for="wa-mensaje">Contanos brevemente (Año, modelo o características):</label>
+                <textarea id="wa-mensaje" rows="4" placeholder="Ej: Fiat Cronos 2022, o Cobertura para casamiento de 100 personas..." required></textarea>
+                <div class="form-buttons">
+                    <button type="button" class="btn btn-prev">Anterior</button>
+                    <button type="button" class="btn btn-next">Siguiente</button>
+                </div>
+            </fieldset>
+
+            <fieldset class="step">
+                <h3>3. ¿Quién solicita la cotización?</h3>
+                <label for="wa-nombre">Nombre y Apellido:</label>
+                <input type="text" id="wa-nombre" placeholder="Tu nombre" required>
+
+                <label for="wa-email">Correo Electrónico:</label>
+                <input type="email" id="wa-email" placeholder="tu@email.com" required>
+
+                <div class="form-buttons">
+                    <button type="button" class="btn btn-prev">Anterior</button>
+                    <button type="submit" class="btn btn-submit">Enviar a WhatsApp 💬</button>
+                </div>
+            </fieldset>
+        </form>
     </section>
 
     <footer>
-        <p>© 2026 ServidiaSeguro. Todos los derechos resonators.</p>
+        <div class="container">
+            <p>© 2026 ServidiaSeguro. Todos los derechos reservados.</p>
+            <p>Empalme Villa Constitución, Santa Fe, Argentina.</p>
+        </div>
     </footer>
 
     <script>
-        document.getElementById('form-whatsapp').addEventListener('submit', function(event) {
-            event.preventDefault(); 
+        document.addEventListener("DOMContentLoaded", () => {
+            const steps = Array.from(document.querySelectorAll(".step"));
+            const nextButtons = document.querySelectorAll(".btn-next");
+            const prevButtons = document.querySelectorAll(".btn-prev");
+            const progressText = document.getElementById("progress-text");
+            const form = document.getElementById("cotizador-seguros");
 
-            var nombre = document.getElementById('wa-nombre').value;
-            var seguro = document.getElementById('wa-seguro').value;
-            var mensaje = document.getElementById('wa-mensaje').value;
+            let currentStep = 0;
 
-            var numeroWhatsApp = "+5493400661689"; 
+            // Navegación de los pasos
+            function showStep(stepIndex) {
+                steps.forEach((step, index) => {
+                    step.classList.toggle("active", index === stepIndex);
+                });
+                progressText.textContent = `Paso ${stepIndex + 1} de ${steps.length}`;
+            }
 
-            var texto = "Hola Servidia Seguros, mi nombre es *" + nombre + "*.%0A" +
-                        "Me interesa consultar por un seguro para *" + seguro + "*.%0A" +
-                        "Mensaje: " + mensaje;
+            function validateStep(stepIndex) {
+                const inputs = steps[stepIndex].querySelectorAll("[required]");
+                for (let input of inputs) {
+                    if (!input.checkValidity()) {
+                        input.reportValidity();
+                        return false;
+                    }
+                }
+                return true;
+            }
 
-            var url = "https://wa.me/" + numeroWhatsApp + "?text=" + texto;
-            window.open(url, '_blank');
+            nextButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    if (validateStep(currentStep)) {
+                        currentStep++;
+                        showStep(currentStep);
+                    }
+                });
+            });
+
+            prevButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    currentStep--;
+                    showStep(currentStep);
+                });
+            });
+
+            // ENVÍO FINAL A WHATSAPP
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); 
+
+                // Capturamos los datos de los 3 pasos
+                var nombre = document.getElementById('wa-nombre').value;
+                var seguro = document.getElementById('wa-seguro').value;
+                var mensaje = document.getElementById('wa-mensaje').value;
+                var email = document.getElementById('wa-email').value;
+
+                var numeroWhatsApp = "+5493400661689"; 
+
+                // Armamos un texto súper ordenado y profesional para tu WhatsApp
+                var texto = "Hola Servidia Seguros, mi nombre es *" + nombre + "*.%0A" +
+                            "Me interesa consultar por un seguro para *" + seguro + "*.%0A%0A" +
+                            "*Detalles enviados:* " + mensaje + "%0A" +
+                            "*Email de contacto:* " + email;
+
+                var url = "https://wa.me/" + numeroWhatsApp + "?text=" + texto;
+                
+                // Abre el chat de WhatsApp
+                window.open(url, '_blank');
+
+                // Opcional: Reinicia el formulario al primer paso tras enviar
+                form.reset();
+                currentStep = 0;
+                showStep(currentStep);
+            });
         });
-    </script></body>
-</html>        
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const steps = Array.from(document.querySelectorAll(".step"));
+            const nextButtons = document.querySelectorAll(".btn-next");
+            const prevButtons = document.querySelectorAll(".btn-prev");
+            const progressText = document.getElementById("progress-text");
+            const form = document.getElementById("cotizador-seguros");
+            const selectSeguro = document.getElementById('wa-seguro');
+
+            let currentStep = 0;
+
+            // Al hacer clic en una tarjeta de arriba, selecciona ese seguro abajo automáticamente
+            document.querySelectorAll('.card-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    const tituloTarjeta = link.querySelector('h3').textContent.trim().toLowerCase();
+                    for (let option of selectSeguro.options) {
+                        if (option.value.toLowerCase().includes(tituloTarjeta)) {
+                            selectSeguro.value = option.value;
+                            break;
+                        }
+                    }
+                });
+            });
+
+            // Control visual de los pasos
+            function showStep(stepIndex) {
+                steps.forEach((step, index) => {
+                    step.classList.toggle("active", index === stepIndex);
+                });
+                progressText.textContent = `Paso ${stepIndex + 1} de ${steps.length}`;
+            }
+
+            // Validar campos obligatorios antes de avanzar
+            function validateStep(stepIndex) {
+                const inputs = steps[stepIndex].querySelectorAll("[required]");
+                for (let input of inputs) {
+                    if (!input.checkValidity()) {
+                        input.reportValidity();
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            // Botón Siguiente
+            nextButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    if (validateStep(currentStep)) {
+                        currentStep++;
+                        showStep(currentStep);
+                    }
+                });
+            });
+
+            // Botón Anterior
+            prevButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    currentStep--;
+                    showStep(currentStep);
+                });
+            });
+
+            // Envío de datos ordenados a tu WhatsApp
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); 
+
+                var nombre = document.getElementById('wa-nombre').value;
+                var seguro = selectSeguro.value;
+                var mensaje = document.getElementById('wa-mensaje').value;
+                var email = document.getElementById('wa-email').value;
+
+                var numeroWhatsApp = "+5493400661689"; 
+
+                var texto = "Hola Servidia Seguros, mi nombre es *" + nombre + "*.%0A" +
+                            "Me interesa consultar por un seguro para *" + seguro + "*.%0A%0A" +
+                            "*Detalles enviados:* " + mensaje + "%0A" +
+                            "*Email de contacto:* " + email;
+
+                var url = "https://wa.me/" + numeroWhatsApp + "?text=" + texto;
+                
+                window.open(url, '_blank');
+
+                // Resetea el formulario al terminar
+                form.reset();
+                currentStep = 0;
+                showStep(currentStep);
+            });
+        });
+    </script>
+</body>
+</html>
 <h2>
